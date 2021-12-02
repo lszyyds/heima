@@ -1,0 +1,57 @@
+USE myemployees;
+SELECT LENGTH('鲍文浩哈哈哈') 输出;                   #汉字有3个字节
+SELECT LENGTH('baowenhaohahaha')youqu;         #英文有1个字节
+SELECT  CONCAT(last_name,first_name) 姓名 FROM employees;      #concat拼接字符串
+SELECT SUBSTR('nihaoshabi',1)shuhu;
+SELECT INSTR('nibuhao','n');
+SELECT UPPER(last_name)  FROM employees ;#大写
+SELECT LOWER(last_name) FROM employees;#小写
+SELECT SUBSTR('大数据2班',4) ;
+#select substr (str,postion,lenrth);  字符串，位置，长度
+SELECT SUBSTR('大数据2班',2,2);
+SELECT ROUND(4.78); #马卡把卡，真棒
+SELECT CEIL(0.003);
+SELECT FLOOR(2.003);
+SELECT FLOOR(-2.003);
+
+#1、mod 取余
+SELECT 10%3 ;   #被除数是10，除数是3
+#被除数是老大，他是正数就是正数，他是负数就是负数
+SELECT MOD(10,3) ; #1
+SELECT MOD(-10,-3);#-1
+SELECT MOD(-10,3) ; #-1
+SELECT MOD(10,-3);#15
+
+#一、日期函数
+
+#1、now返回当前系统日期+时间
+SELECT NOW() 当前时间;
+
+#2、curdate  current 【当前的意思】 返回当前系统日期，不包含时间
+SELECT CURDATE();
+
+#3、curtime  current 返回当前系统时间，不包含日期
+SELECT CURTIME();
+
+#4、可以获取指定的部分，年，月，日，时，分，秒
+SELECT  YEAR(NOW());
+SELECT  MONTH(NOW());
+SELECT  DAY(NOW());
+SELECT  HOUR(NOW());
+SELECT  MINUTE(NOW());
+SELECT  SECOND(NOW());
+SELECT YEAR('2002') 年;
+#second 单词俩个意思，秒和第二，谢谢
+
+#案例：查询employees 表中入职日期hiredate 的年份
+SELECT YEAR(hiredate) FROM employees;
+
+#其他函数：查看版本
+SELECT VERSION();
+#查看当前的数据库  玛卡巴卡，莫斯德斯，依古比古
+SELECT DATABASE();
+
+#查看当前用户
+SELECT USER();
+
+
